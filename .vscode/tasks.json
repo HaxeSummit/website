@@ -1,0 +1,7 @@
+{
+    "version": "0.1.0",
+    "command": "npm",
+    "args": ["run", "build.website", "--silent", "--", "--connect", "6000", "--times"],
+    "problemMatcher": "$haxe",
+    "isShellCommand": true
+}

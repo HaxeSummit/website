@@ -1,0 +1,12 @@
+{
+    "haxe.displayConfigurations": [
+        ["website.hxml"]
+    ],
+    "haxe.displayServer": {
+       "haxePath": "./node_modules/.bin/haxe",
+        "windows": {
+            "haxePath": "node_modules\\.bin\\haxe.cmd"
+        }
+    },
+    "haxe.displayPort": 6000
+}
