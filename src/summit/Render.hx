@@ -90,9 +90,9 @@ class Render {
           shortName: v.frontmatter.shortName,
           fullName: v.frontmatter.fullName,
           order: or(v.frontmatter.order, 0),
-          image: or(v.frontmatter.image, switch '/assets/speakers/${v.id}.jpg' {
+          image: or(v.frontmatter.image, switch 'assets/speakers/${v.id}.jpg' {
             case found if ('bin$found'.exists()): found;
-            default: '/assets/speakers/${v.id}.png';
+            default: 'assets/speakers/${v.id}.png';
           }),
           link: or(v.frontmatter.link, 'https://github.com/${v.id}'),
           bio: new Html(Markdown.markdownToHtml(v.markdown)),

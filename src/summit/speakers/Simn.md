@@ -1,7 +1,7 @@
 ---
 fullName: 'Simon Krajewski'
 shortName: 'Simon'
-image: '/assets/speakers/simon-krajewski.jpg'
+image: 'assets/speakers/simon-krajewski.jpg'
 jobTitle: 'Main maintainer of the Haxe Compiler'
 link: 'https://github.com/Simn'
 order: 8000

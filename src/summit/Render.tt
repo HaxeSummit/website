@@ -78,7 +78,7 @@
   (: document(
     'Haxe Summit 2018 in Washington',
     content,
-    ["og:image" => "/assets/banner.png"]
+    ["og:image" => "assets/banner.png"]
   ) :)
 
 (: end :)
@@ -136,11 +136,11 @@
     <head>
       <meta charset="utf-8">
       <title>(: title :)</title>
-      <link rel="stylesheet" href="/assets/styles.css">
+      <link rel="stylesheet" href="assets/styles.css">
       <link href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
       <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="icon" href="/assets/favicon.png" type="image/png" />
+      <link rel="icon" href="assets/favicon.png" type="image/png" />
       (: if meta != null :)
         (: for k in meta.keys() :)
           <meta property="(: k :)" content="(: meta[k] :)" />
@@ -149,7 +149,7 @@
     </head>
     <body>
       (: body :)
-      <script src="/assets/script.js"></script>
+      <script src="assets/script.js"></script>
     </body>
   </html>
 (: end :)
@@ -180,7 +180,7 @@
         <strong>Haxe</strong>
         Summit
       </span>
-      <img src="/assets/logo-transparent.png">
+      <img src="assets/logo-transparent.png">
       <span class="year">2018</span>
       
     </h1>
@@ -214,11 +214,11 @@
 (: static var partners :)
   <h3>This event is kindly supported by our partners:</h3>
   <ul class="partners">
-    <li><a href="https://www.doclerholding.com/"><img src="/assets/partners/DH.png"></a></li>
-    <li><a href="https://haxe.org/foundation/"><img src="/assets/partners/HF.png"></a></li>
-    <li><a href="https://www.silexlabs.org/"><img src="/assets/partners/silexlabs.org.png"></a></li>
-    <li><a href="http://flowplay.com/"><img src="/assets/partners/flowplay.svg" style="width: 150px"></a></li>
-    <li><a href="https://www.innogames.com/"><img src="/assets/partners/innogames.jpg" style="width: 170px"></a></li>
+    <li><a href="https://www.doclerholding.com/"><img src="assets/partners/DH.png"></a></li>
+    <li><a href="https://haxe.org/foundation/"><img src="assets/partners/HF.png"></a></li>
+    <li><a href="https://www.silexlabs.org/"><img src="assets/partners/silexlabs.org.png"></a></li>
+    <li><a href="http://flowplay.com/"><img src="assets/partners/flowplay.svg" style="width: 150px"></a></li>
+    <li><a href="https://www.innogames.com/"><img src="assets/partners/innogames.jpg" style="width: 170px"></a></li>
   </ul>
   (:*
   <h2>Sponsor the Event</h2>

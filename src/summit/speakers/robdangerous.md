@@ -1,7 +1,7 @@
 ---
 fullName: 'Robert Konrad'
 shortName: 'Robert'
-image: '/assets/speakers/robert-konrad.png'
+image: 'assets/speakers/robert-konrad.png'
 jobTitle: 'Researcher at Technische Universität Darmstadt'
 link: 'https://twitter.com/robdangerous'
 order: 6000
