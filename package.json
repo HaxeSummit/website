@@ -2,8 +2,10 @@
   "name": "haxe-summit-2017-website",
   "version": "1.0.0",
   "scripts": {
-    "start": "http-server bin -c5",
-    "build": "npm run build.client && npm run build.website",
+    "start": "http-server docs -c5",
+    "clean":"rm -r docs/*",
+    "build": "npm run clean && npm run build.assets && npm run build.client && npm run build.website",
+    "build.assets": "cp -r bin/* docs",
     "build.client": "haxe client.hxml",
     "build.website": "haxe website.hxml",
     "postinstall": "lix download && npm run build.client"

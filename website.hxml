@@ -3,7 +3,7 @@
 -lib tink_template
 -lib yaml
 -lib tink_anon
--D lessieOutput=./bin/assets/styles.css
+-D lessieOutput=./docs/assets/styles.css
 -cp src
 -main summit.Render
 --interp
