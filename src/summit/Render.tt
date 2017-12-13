@@ -76,7 +76,7 @@
   (: end :)
 
   (: document(
-    'Haxe Summit 2017 in Amsterdam',
+    'Haxe Summit 2018 in Washington',
     content,
     ["og:image" => "/assets/banner.png"]
   ) :)
@@ -181,10 +181,10 @@
         Summit
       </span>
       <img src="/assets/logo-transparent.png">
-      <span class="year">2017</span>
+      <span class="year">2018</span>
       
     </h1>
-    <h3>Sep 13-16 <span>@</span> Amsterdam</h3>
+    <h3>May 3-5 <span>@</span> Seatlle</h3>
     <a class="tickets" href="https://twitter.com/HaxeSummit">
       Follow Us
     </a>
