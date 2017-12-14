@@ -4,7 +4,7 @@
   "scripts": {
     "start": "http-server docs -c5",
     "clean":"rm -r docs/*",
-    "build": "npm run clean && npm run build.assets && npm run build.client && npm run build.website",
+    "build": "npm run clean && npm run build.client && npm run build.website && npm run build.assets",
     "build.assets": "cp -r bin/* docs",
     "build.client": "haxe client.hxml",
     "build.website": "haxe website.hxml",
