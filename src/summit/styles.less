@@ -350,6 +350,25 @@ a {
   }
 }
 
+a.big_button {
+
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  background: @bright;
+  color: white;
+  transition: all .25s;
+  &:hover {
+    background: white;
+    color: @bright;
+  }
+  text-decoration: none;
+  padding: .5em 1.5em;
+  font-size: 28px;
+  font-weight: 100;
+  bottom: 0;
+}
+
 section {
   overflow: hidden;
   user-select: auto;

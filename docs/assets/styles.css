@@ -327,6 +327,23 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a.big_button {
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  background: crimson;
+  color: white;
+  transition: all .25s;
+  text-decoration: none;
+  padding: .5em 1.5em;
+  font-size: 28px;
+  font-weight: 100;
+  bottom: 0;
+}
+a.big_button:hover {
+  background: white;
+  color: crimson;
+}
 section {
   overflow: hidden;
   user-select: auto;
