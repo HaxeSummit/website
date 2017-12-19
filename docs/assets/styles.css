@@ -1014,6 +1014,9 @@ input[type="radio"] ~ .details .talks > li li:last-child {
 input[type="radio"] ~ .details .talks > li > p {
   margin-bottom: 1.5em;
 }
+section.footer {
+  padding: 10px;
+}
 section.speakers > ul {
   text-align: center;
 }
