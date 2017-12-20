@@ -100,27 +100,27 @@
         <h2 style="margin: 50px 0">Second Track</h2>
         <iframe id="stream2" src="https://player.twitch.tv/?channel=haxesummit2&amp;autoplay=false" frameborder="0"
                 allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-        <a href="https://www.twitch.tv/haxesummit?tt_medium=live_embed&tt_content=text_link"
+        <a target="_blank" href="https://www.twitch.tv/haxesummit?tt_medium=live_embed&tt_content=text_link"
            style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch
             live video from haxesummit on www.twitch.tv</a>
         (: end :)
 
         (: static function speakers(speakerList:Array
         <Speaker>) :)
-            <h2>Call for speakers</h2>
+            <h2>Call for Speakers</h2>
             <p>The call to speakers is open until the end of February. Please use the form below to submit your
                 proposal. We will let you know if your proposal is accepted as soon as possible.</p>
             <p>You can submit a proposal for a quick 15 minute talk, a conference talk of 45 minutes or a workshop of 2
                 hours. We are looking for submissions for different audience levels - beginner, intermediate and
                 advanced. In terms of topics, here are some categories we are considering:
             </p>
-            <p>
-                -Games<br>
-                -Web<br>
-                -Mobile & IOT<br>
-                -Mind the Geek<br>
-                -Programming<br>
-            </p>
+            <ul class="vertical_list">
+                <li>Game</li>
+                <li>Web</li>
+                <li>Mobile & IOT</li>
+                <li>Mind the Geek</li>
+                <li>Programming</li>
+            </ul>
             <p>Please make sure to include all the relevant details in your proposal. Of course, you can submit several
                 proposals if you can not decide on a topic.</p>
             <p>As a speaker, you will get a lot of community appreciation, a big thank you and free access to the
@@ -226,7 +226,7 @@
 
                     </h1>
                     <h3>May 3-5 <span>@</span> Seatlle</h3>
-                    <a class="tickets" href="https://twitter.com/HaxeSummit">
+                    <a class="tickets" target="_blank" href="https://twitter.com/HaxeSummit">
                         Follow Us
                     </a>
                 </header>
@@ -264,12 +264,15 @@
                 (: static var partners :)
                 <h3>This event is kindly supported by our partners:</h3>
                 <ul class="partners">
-                    <li><a href="https://www.doclerholding.com/"><img src="assets/partners/DH.png"></a></li>
-                    <li><a href="https://haxe.org/foundation/"><img src="assets/partners/HF.png"></a></li>
-                    <li><a href="http://flowplay.com/"><img src="assets/partners/flowplay.svg" style="width: 150px"></a>
+                    <li><a target="_blank" href="https://www.doclerholding.com/"><img src="assets/partners/DH.png"></a>
                     </li>
-                    <li><a href="https://www.innogames.com/"><img src="assets/partners/innogames.jpg"
-                                                                  style="width: 170px"></a>
+                    <li><a target="_blank" href="https://haxe.org/foundation/"><img src="assets/partners/HF.png"></a>
+                    </li>
+                    <li><a target="_blank" href="http://flowplay.com/"><img src="assets/partners/flowplay.svg"
+                                                                            style="width: 150px"></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.innogames.com/"><img src="assets/partners/innogames.jpg"
+                                                                                  style="width: 170px"></a>
                     </li>
                 </ul>
 
@@ -319,17 +322,20 @@
 
                 (: static var footer :)
                 <section class="footer">
+                    <h1><a href="#contact">CONTACT</a></h1>
+                    <p>Do you have any questions or suggestions? Don’t hesitate to let us know.</p>
                     <a class="big_button" href="mailto:events@haxe.org">contact us</a>
                 </section>
                 (: end :)
 
                 (: static var location :)
-                <p>The conference will take place at <a href="http://www.thehiltonseattle.com/">The Hilton Seattle
+                <p>The conference will take place at <a target="_blank" href="http://www.thehiltonseattle.com/">The
+                    Hilton Seattle
                     Downtown</a></p>
                 <p style="text-align: center">They are offering a special rate of 179$/night on rooms for conference
                     attendees. Just complete your
                     booking through the link below</p>
-                <a class="big_button"
+                <a class="big_button" target="_blank"
                    href="http://www.hilton.com/en/hi/groups/personalized/S/SEASHHF-CGA-20180502/index.jhtml">special
                     offer</a>
                 <div class="details">
@@ -341,7 +347,7 @@
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5379.637059523419!2d-122.33778467268793!3d47.61021819302131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c15b8234b0b5e17!2sHilton+Seattle!5e0!3m2!1sfr!2sfr!4v1513245576485"
                                 width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
-                    <a class="gallery" href="http://www.thehiltonseattle.com/">
+                    <a class="gallery" target="_blank" href="http://www.thehiltonseattle.com/">
                     </a>
                 </div>
                 (: end :)
