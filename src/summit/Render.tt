@@ -56,11 +56,8 @@
         (: end :)
 
         (: static var ticketsSold :)
-        <p>
-            The conference is sold out.<br/>
-            If you badly want to attend and didn't get to buy a ticket yet,<br/>
-            <a href="mailto:events@haxe.org">please contact us</a>.
-        </p>
+        <p>Early Bird tickets are available. In the meantime, you can already book your accommodation</p>
+        <a class="big_button" target="_blank" href="https://www.eventbrite.com/e/haxe-summit-usa-2018-tickets-41440951000?aff=HaxeWebsite">Get your ticket</a>
 
         (: end :)
 
@@ -75,7 +72,7 @@
             (: section('Partners', partners) :)
             (:* section('Speakers', speakers(conf.speakers)) *:)
             (: section('Speakers', speakers([])) :)
-            (: section('Tickets', ticketsSold) :)
+            (: section('Tickets', tickets) :)
             (:* section('Stream', stream) *:)
             (: section('Location', location) :)
             (: footer :)
@@ -277,46 +274,7 @@
                 </ul>
 
                 <h2>Sponsor the Event</h2>
-                <p>Pitch in and become a sponsor! We offer the following packages:</p>
-                <ol class="tiers">
-
-                    <li class="gold">
-                        <h2>Gold</h2>
-                        <h4>5000€</h4>
-                        <ul>
-                            <li>Logo on printed material and on the website</li>
-                            <li>3 free entrances are included</li>
-                            <li>small stand or rollup possible &amp; distribution of goodies.</li>
-                        </ul>
-                    </li>
-
-                    <li class="silver">
-                        <h2>Silver</h2>
-                        <h4>3000€</h4>
-                        <ul>
-                            <li>Logo on printed material and on the website.</li>
-                            <li>1 free entrance.</li>
-                        </ul>
-                    </li>
-
-                    <li class="lunch">
-                        <h2>Lunch</h2>
-                        <h4>1500€</h4>
-                        <ul>
-                            <li>Sponsor lunch for one day of your choice.</li>
-                            <li>Logo on printed material and on the website.</li>
-                        </ul>
-                    </li>
-                    <li class="event">
-                        <h2>Event</h2>
-                        <h4>5000€</h4>
-                        <ul>
-                            <li>Sponsor a social event for one day of your choice.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p>We are flexible, just contact us if you have any
-                    suggestions or questions!</p>
+                <p>Are you interested in sponsoring this event? Awesome, we would love to hear from you.</p>
                 <a class="big_button" href="mailto:events@haxe.org">sponsor the event</a>
                 (: end :)
 
@@ -353,14 +311,29 @@
                 (: end :)
 
                 (: static var tickets :)
-                <a title="Logiciel billetterie en ligne" href="https://www.weezevent.com//?c=sys_widget"
-                   class="weezevent-widget-integration" target="_blank"
-                   data-src="https://www.weezevent.com/widget_billeterie.php?id_evenement=248775&amp;lg_billetterie=2&amp;code=10860&amp;resize=1&amp;width_auto=1&amp;color_primary=00AEEF"
-                   data-width="650" data-height="600" data-id="248775" data-resize="1" data-width_auto="1"
-                   data-noscroll="0"
-                   data-nopb="0">Billetterie Weezevent</a>
-                <script type="text/javascript" src="https://www.weezevent.com/js/widget/min/widget.min.js"></script>
+                <h2>Early Bird tickets are available</h2>
+                <div id="eventbrite-widget-container-41440951000" class="eventbrite"></div>
+
+                <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+                <script type="text/javascript">
+                    var exampleCallback = function() {
+                        console.log('Order complete!');
+                    };
+
+                    window.EBWidgets.createWidget({
+                        // Required
+                        widgetType: 'checkout',
+                        eventId: '41440951000',
+                        iframeContainerId: 'eventbrite-widget-container-41440951000',
+
+                        // Optional
+                        iframeContainerHeight: 455,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+                        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+                    });
+                </script>
                 (: end :)
+
                 (:*
                 (: static function schedule(conf:Conference) :)
                 (: var speakers = [for (s in conf.speakers) s.id => s] :)

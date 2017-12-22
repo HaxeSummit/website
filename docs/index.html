@@ -96,46 +96,7 @@
                 </ul>
 
                 <h2>Sponsor the Event</h2>
-                <p>Pitch in and become a sponsor! We offer the following packages:</p>
-                <ol class="tiers">
-
-                    <li class="gold">
-                        <h2>Gold</h2>
-                        <h4>5000€</h4>
-                        <ul>
-                            <li>Logo on printed material and on the website</li>
-                            <li>3 free entrances are included</li>
-                            <li>small stand or rollup possible &amp; distribution of goodies.</li>
-                        </ul>
-                    </li>
-
-                    <li class="silver">
-                        <h2>Silver</h2>
-                        <h4>3000€</h4>
-                        <ul>
-                            <li>Logo on printed material and on the website.</li>
-                            <li>1 free entrance.</li>
-                        </ul>
-                    </li>
-
-                    <li class="lunch">
-                        <h2>Lunch</h2>
-                        <h4>1500€</h4>
-                        <ul>
-                            <li>Sponsor lunch for one day of your choice.</li>
-                            <li>Logo on printed material and on the website.</li>
-                        </ul>
-                    </li>
-                    <li class="event">
-                        <h2>Event</h2>
-                        <h4>5000€</h4>
-                        <ul>
-                            <li>Sponsor a social event for one day of your choice.</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p>We are flexible, just contact us if you have any
-                    suggestions or questions!</p>
+                <p>Are you interested in sponsoring this event? Awesome, we would love to hear from you.</p>
                 <a class="big_button" href="mailto:events@haxe.org">sponsor the event</a>
                 
                 </section>
@@ -179,13 +140,28 @@
                 <section class="tickets">
                     <h1><a href="#tickets">Tickets</a></h1>
                     
-        <p>
-            The conference is sold out.<br/>
-            If you badly want to attend and didn't get to buy a ticket yet,<br/>
-            <a href="mailto:events@haxe.org">please contact us</a>.
-        </p>
+                <h2>Early Bird tickets are available</h2>
+                <div id="eventbrite-widget-container-41440951000" class="eventbrite"></div>
 
-        
+                <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+                <script type="text/javascript">
+                    var exampleCallback = function() {
+                        console.log('Order complete!');
+                    };
+
+                    window.EBWidgets.createWidget({
+                        // Required
+                        widgetType: 'checkout',
+                        eventId: '41440951000',
+                        iframeContainerId: 'eventbrite-widget-container-41440951000',
+
+                        // Optional
+                        iframeContainerHeight: 455,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+                        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+                    });
+                </script>
+                
                 </section>
                 
             

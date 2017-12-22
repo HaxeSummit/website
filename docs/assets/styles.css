@@ -130,7 +130,6 @@ nav a[href="/#start"] img {
   }
 }
 section.tickets h1:before {
-  content: 'Sold Out';
   color: rgba(220, 20, 60, 0.8);
   text-transform: none;
   letter-spacing: 0;
@@ -1005,6 +1004,10 @@ input[type="radio"] ~ .details .talks > li > p {
 }
 section.footer {
   padding: 10px;
+}
+.eventbrite {
+  width: 100%;
+  max-width: 750px;
 }
 section.speakers .vertical_list {
   margin-bottom: 20px;
