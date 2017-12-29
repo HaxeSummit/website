@@ -4,21 +4,21 @@ import js.html.*;
 import js.Browser.*;
 using StringTools;
 
-class Client { 
+class Client {
 
   static function main() {
-    function overloayFromHash() 
-      for (kind in ['speaker', 'talk']) {
-        if (window.location.hash.startsWith('#$kind-')) {
-          var id = window.location.hash.substr('#$kind-'.length);
-          switch document.getElementById('$kind-$id') {
-            case null:
-            case v: v.click();
-          }
-          return;
+    function overloayFromHash()
+    for (kind in ['speaker', 'talk']) {
+      if (window.location.hash.startsWith('#$kind-')) {
+        var id = window.location.hash.substr('#$kind-'.length);
+        switch document.getElementById('$kind-$id') {
+          case null:
+          case v: v.click();
         }
+        return;
       }
-    
+    }
+
 
     overloayFromHash();
 
@@ -42,5 +42,5 @@ class Client {
     main.addEventListener('scroll', updateNav);
     updateNav();
   }
-  
+
 }

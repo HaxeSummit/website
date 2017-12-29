@@ -12,12 +12,12 @@ using sys.FileSystem;
 class TextRenderer implements NodeVisitor {
   var buf = new StringBuf();
   function new() {}
-	public function visitText(text:TextNode):Void {
+  public function visitText(text:TextNode):Void {
     buf.add(text.text);
   }
-	public function visitElementBefore(element:ElementNode):Bool
-    return true;
-	public function visitElementAfter(element:ElementNode):Void {}
+  public function visitElementBefore(element:ElementNode):Bool
+  return true;
+  public function visitElementAfter(element:ElementNode):Void {}
 
   static public function getText(markdown:Node) {
     var r = new TextRenderer();
@@ -32,14 +32,14 @@ class Render {
 
   static function dissect(md:String) {
 
-		var document = new Document(),
-        lines = ~/(\r\n|\r)/g.replace(md, '\n').split("\n");
-    
+    var document = new Document(),
+    lines = ~/(\r\n|\r)/g.replace(md, '\n').split("\n");
+
     document.parseRefLinks(lines);
 
     var blocks = document.parseLines(lines);
 
-    return 
+    return
       switch blocks[0] {
         case null: None;
         case v: Some({
@@ -56,35 +56,35 @@ class Render {
     { //skip irrelevant warnings from yaml lib
       var old = haxe.Log.trace;
       haxe.Log.trace = function (msg, ?pos:haxe.PosInfos)
-        if (pos != null && pos.fileName != 'YTimestamp.hx') old(msg, pos);
+      if (pos != null && pos.fileName != 'YTimestamp.hx') old(msg, pos);
     }
-    var talks = 
-      sorted(
-        read('src/summit/talks', function (v) 
-          return dissect(v.markdown).map(function (doc):Talk return {
-            id: v.id,
-            title: doc.title,
-            track: v.frontmatter.track,
-            starts: v.frontmatter.starts,
-            speakers: v.frontmatter.speakers,
-            duration: v.frontmatter.duration,
-            description: doc.body,
-          })
-        ),
-        function (a, b) return Reflect.compare(a.starts.getTime(), b.starts.getTime())
-      );
-    
+    var talks =
+    sorted(
+      read('src/us/2018/summit/talks', function (v)
+      return dissect(v.markdown).map(function (doc):Talk return {
+        id: v.id,
+        title: doc.title,
+        track: v.frontmatter.track,
+        starts: v.frontmatter.starts,
+        speakers: v.frontmatter.speakers,
+        duration: v.frontmatter.duration,
+        description: doc.body,
+      })
+      ),
+      function (a, b) return Reflect.compare(a.starts.getTime(), b.starts.getTime())
+    );
+
     var names = 'Wednesday,Thursday,Friday,Saturday'.split(',');
-    
-    'bin/index.html'.saveContent(renderAll({
+
+    'bin/us/2018/index.html'.saveContent(renderAll({
       days: [for (day in 13...17) {
         {
           name: names.shift(),
-          talks: [for (t in talks) if (t.starts.getDate() == day) t],
+        talks: [for (t in talks) if (t.starts.getDate() == day) t],
         }
       }],
       speakers: sorted(
-        read('src/summit/speakers', function (v) return Some(({
+        read('src/us/2018/summit/speakers', function (v) return Some(({
           id: v.id,
           jobTitle: v.frontmatter.jobTitle,
           shortName: v.frontmatter.shortName,
@@ -101,7 +101,7 @@ class Render {
         function (a, b) return a.order - b.order
       )
     }));
-    
+
   }
 
   static function sorted<A>(a:Array<A>, f) {
@@ -110,7 +110,7 @@ class Render {
   }
 
   static function or<A>(a:A, b:A)
-    return if (a == null) b else a;
+  return if (a == null) b else a;
 
   static function read<Raw, A>(directory:String, f:{ id:String, frontmatter:Raw, markdown: String }->Option<A>):Array<A> {
     return [for (file in directory.readDirectory())
@@ -127,22 +127,22 @@ class Render {
 
   static function split<A>(path:String) {
     var content = path.getContent().replace('\r', '\n');
-    return 
+    return
       if (content.startsWith('---\n'))
         switch content.indexOf('---\n', 3) {
           case -1: None;
           case v:
-            var data:A = 
-              try 
-                yaml.Yaml.parse(
-                  content.substring(4, v),
-                  new yaml.Parser.ParserOptions().useObjects()
-                )
-              catch (e:Dynamic) {
-                Sys.println('invalid frontmatter in $path:\n$e');
-                Sys.exit(500);
-                None;
-              }
+            var data:A =
+            try
+            yaml.Yaml.parse(
+              content.substring(4, v),
+              new yaml.Parser.ParserOptions().useObjects()
+            )
+            catch (e:Dynamic) {
+              Sys.println('invalid frontmatter in $path:\n$e');
+              Sys.exit(500);
+              None;
+            }
             Some({
               frontmatter: data,
               markdown: content.substr(v + 4),

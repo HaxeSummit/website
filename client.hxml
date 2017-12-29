@@ -1,5 +1,5 @@
--cp src
+-cp src/us/2018
 -main Client
 -lib tink_core
--js docs/assets/script.js
+-js docs/us/2018/assets/script.js
 -dce full
