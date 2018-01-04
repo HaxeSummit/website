@@ -269,15 +269,10 @@
                 (: static var partners :)
                 <h3>This event is kindly supported by our partners:</h3>
                 <ul class="partners">
-                    <li><a target="_blank" href="https://www.doclerholding.com/"><img src="assets/partners/DH.png"></a>
-                    </li>
                     <li><a target="_blank" href="https://haxe.org/foundation/"><img src="assets/partners/HF.png"></a>
                     </li>
                     <li><a target="_blank" href="http://flowplay.com/"><img src="assets/partners/flowplay.svg"
                                                                             style="width: 150px"></a>
-                    </li>
-                    <li><a target="_blank" href="https://www.innogames.com/"><img src="assets/partners/innogames.jpg"
-                                                                                  style="width: 170px"></a>
                     </li>
                 </ul>
 
