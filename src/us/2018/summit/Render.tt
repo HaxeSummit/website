@@ -186,7 +186,7 @@
                     <meta name="viewport" content="width=device-width, initial-scale=1">
                     <meta name="twitter:image:src" content="assets/banner.png">
                     <meta name="twitter:title" content="US Haxe Summit 2018">
-                    <meta name="twitter:card" content="assets/banner.png">
+                    <meta name="twitter:card" content="summary">
                     <meta name="twitter:url" content="https://summit.haxe.org/us/2018/" />
                     <link rel="icon" href="assets/favicon.png" type="image/png"/>
                     (: if meta != null :)
