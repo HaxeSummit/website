@@ -82,7 +82,11 @@
         (: document(
         'Haxe Summit 2018 in Seattle',
         content,
-        ["og:image" => "assets/banner.png"]
+        [
+        "og:image" => "assets/banner.png",
+        "og:title" => "US Haxe Summit 2018",
+        "og:url" => "https://summit.haxe.org/us/2018"
+        ]
         ) :)
 
         (: end :)
@@ -180,6 +184,10 @@
                           rel='stylesheet'
                           type='text/css'>
                     <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta name="twitter:image:src" content="assets/banner.png">
+                    <meta name="twitter:title" content="US Haxe Summit 2018">
+                    <meta name="twitter:card" content="assets/banner.png">
+                    <meta name="twitter:url" content="https://summit.haxe.org/us/2018/" />
                     <link rel="icon" href="assets/favicon.png" type="image/png"/>
                     (: if meta != null :)
                     (: for k in meta.keys() :)
@@ -230,7 +238,7 @@
                         <span class="year">2018</span>
 
                     </h1>
-                    <h3>May 3-5 <span>@</span> Seatlle</h3>
+                    <h3>May 3-5 <span>@</span> Seattle</h3>
                     <a class="tickets" target="_blank" href="https://twitter.com/HaxeSummit">
                         Follow Us
                     </a>
