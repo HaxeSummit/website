@@ -655,11 +655,18 @@ section.schedule {
           }
           
           &[data-track="A"] {
-            right: 50%;
+            left: 0%;
+            width: 33%;
           }
 
           &[data-track="B"] {
-            left: 50%;
+            left: 33.36%;
+            width: 33%;
+          }
+
+          &[data-track="C"] {
+            left: 66.66%;
+            width: 33.36%;
           }
           
           .loop-starts-hour(@counter) when (@counter < 18) {
@@ -713,7 +720,7 @@ section.schedule {
       flex-wrap: wrap;
       display: flex;
       >li {
-        flex-basis: 50%;
+        flex-basis: 100%;
       }
     }
     text-align: center;

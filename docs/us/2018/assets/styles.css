@@ -609,10 +609,16 @@ section.schedule ol.days > li .talks > li > label > time > span:nth-of-type(2) {
   opacity: .75;
 }
 section.schedule ol.days > li .talks > li[data-track="A"] {
-  right: 50%;
+  left: 0%;
+  width: 33%;
 }
 section.schedule ol.days > li .talks > li[data-track="B"] {
-  left: 50%;
+  left: 33.36%;
+  width: 33%;
+}
+section.schedule ol.days > li .talks > li[data-track="C"] {
+  left: 66.66%;
+  width: 33.36%;
 }
 section.schedule ol.days > li .talks > li[data-starts^="17"] {
   top: 900px;
@@ -832,7 +838,7 @@ section.schedule ol.days h1 {
     display: flex;
   }
   section.schedule ol.days > li {
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 }
 section.schedule ol.days > li {
