@@ -7,7 +7,7 @@
     "build": "npm run clean && npm run build.client && npm run build.website && npm run build.assets",
     "build.assets": "cp -r bin/* docs",
     "build.client": "haxe client.hxml",
-    "build.website": "haxe website.hxml",
+    "build.website": "haxe website.hxml && lessc src/us/2018/summit/styles.less bin/us/2018/assets/styles.css",
     "postinstall": "lix download && npm run build.client"
   },
   "repository": {

@@ -77,7 +77,7 @@ nav {
   &.transparent {
     background-color: transparent;
     background-image: linear-gradient( 0, rgba(0,0,0,0), rgba(0,0,0,.5) );
-    a[href="/#start"] {
+    a[href="/#start"], a[href="index.html"] {
       transform: translateY(-100%);
       opacity: 0;    
     }
@@ -121,7 +121,7 @@ nav {
       }
     }
   }  
-  a[href="/#start"] {
+  a[href="/#start"], a[href="index.html"] {
     transition: inherit;
     position: absolute;
     top: 0;
@@ -133,6 +133,18 @@ nav {
     img {
       height: 100%;
     }
+  }
+
+}
+
+.cocnav {
+  height: 49px;
+}
+
+.coc {
+  padding-top: 50px;
+  h2{
+    padding-top: 20px;
   }
 }
 

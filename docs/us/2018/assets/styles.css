@@ -66,7 +66,8 @@ nav.transparent {
   background-color: transparent;
   background-image: linear-gradient(0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 }
-nav.transparent a[href="/#start"] {
+nav.transparent a[href="/#start"],
+nav.transparent a[href="index.html"] {
   transform: translateY(-100%);
   opacity: 0;
 }
@@ -108,7 +109,8 @@ nav ul li {
     display: none;
   }
 }
-nav a[href="/#start"] {
+nav a[href="/#start"],
+nav a[href="index.html"] {
   transition: inherit;
   position: absolute;
   top: 0;
@@ -118,8 +120,18 @@ nav a[href="/#start"] {
   font-size: 0;
   display: block;
 }
-nav a[href="/#start"] img {
+nav a[href="/#start"] img,
+nav a[href="index.html"] img {
   height: 100%;
+}
+.cocnav {
+  height: 49px;
+}
+.coc {
+  padding-top: 50px;
+}
+.coc h2 {
+  padding-top: 20px;
 }
 @keyframes pulse {
   from {
