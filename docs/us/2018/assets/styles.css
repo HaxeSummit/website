@@ -1035,6 +1035,7 @@ section.speakers .vertical_list li {
 }
 section.speakers > ul {
   text-align: center;
+  padding-top: 50px;
 }
 section.speakers > ul > li {
   list-style: none;
