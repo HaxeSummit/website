@@ -1,7 +1,7 @@
 ---
 fullName: 'Nicolas Cannasse'
 shortName: 'Nicolas'
-image: 'https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/21192318_10209964077317792_5499459099225978563_n.jpg?oh=4cedb979c740c3d49f08fe71a4bcbedb&oe=5B1D4C9D'
+image: 'assets/speakers/ncannasse.png'
 jobTitle: 'Director of the Haxe Foundation'
 link: 'https://twitter.com/ncannasse'
 order: 1000
