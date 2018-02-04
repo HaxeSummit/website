@@ -5,6 +5,6 @@ duration: 45
 
 ---
 
-# `Haxe.getState()`
+# `Haxe 4.0`
 
-Nicolas will talk about the current state of Haxe, covering recent language changes, future evolution as well as the HaxeFoundation.
+Nicolas will give an update of the recent Haxe changes, Haxe Foundation activities and talk about things that the team have been working on for Haxe 4.0.
