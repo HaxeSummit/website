@@ -2,7 +2,7 @@
 fullName: 'Francis Bourre'
 shortName: 'Francis'
 image: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAtBAAAAJDgwNzY3MTJhLTA4YzgtNDFlMi05NDlkLTkxNmQ2M2ZjMzhhZQ.jpg'
-jobTitle: 'Software Architect and Technology Manager at Docler holding'
+jobTitle: 'Software Architect at Docler holding'
 link: 'https://twitter.com/francisbourre'
 order: 1950
 ---
