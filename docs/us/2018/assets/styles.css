@@ -35,7 +35,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
   font-weight: 300;
 }
 .nodisplay {
@@ -52,7 +51,6 @@ a[name] {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: inherit;
 }
 nav {
   background-color: #1c0308;
@@ -346,7 +344,6 @@ a.big_button:hover {
 }
 section {
   overflow: hidden;
-  user-select: auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
