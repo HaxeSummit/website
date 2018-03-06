@@ -2254,6 +2254,15 @@
     </main>
   
       <script src="/eu/2017/assets/script.js"></script>
+    <script type="text/javascript">
+                    function startsWith( str, searchString ) {
+                        return str.substr(0, searchString.length) === searchString;
+                    }
+
+                    if ( !startsWith(location.href, "https://summit.haxe.org/eu/2017") && location.href.indexOf("localhost") < 0 ) {
+                        window.location.replace("https://summit.haxe.org/eu/2017/");
+                    }
+                </script>
     </body>
   </html>
 
