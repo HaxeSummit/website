@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "start": "http-server docs -c5",
-    "clean": "echo",
+    "clean": "rm -r docs/*",
     "build": "npm run clean && npm run build.client && npm run build.website && npm run build.assets",
-    "build.assets": "xcopy bin docs /s /e /y",
+    "build.assets": "cp -r bin/* docs",
     "build.client": "haxe client.hxml",
     "build.website": "haxe website.hxml && lessc src/us/2018/summit/styles.less bin/us/2018/assets/styles.css",
     "postinstall": "lix download && npm run build.client"
