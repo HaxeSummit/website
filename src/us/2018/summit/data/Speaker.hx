@@ -12,4 +12,5 @@ typedef Speaker = {
   link: String,
   talks:Array<Talk>,
   bio: Html,
+  interview:Interview
 }

@@ -342,6 +342,10 @@ a.big_button:hover {
   background: white;
   color: crimson;
 }
+a.full {
+  text-align: center;
+  display: block;
+}
 section {
   overflow: hidden;
   padding-bottom: 50px;

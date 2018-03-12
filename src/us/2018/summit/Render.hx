@@ -1,5 +1,6 @@
 package summit;
 
+import summit.data.Interview;
 import summit.data.*;
 import Markdown;
 import markdown.AST;
@@ -74,6 +75,14 @@ class Render {
       function (a, b) return Reflect.compare(a.starts.getTime(), b.starts.getTime())
     );
 
+    var interviews =
+      read('src/us/2018/summit/interviews', function (v)
+      return dissect(v.markdown).map(function (doc):Interview return {
+        speaker: v.frontmatter.speaker,
+        description: doc.body
+      })
+      );
+
     var names = 'Wednesday,Thursday,Friday,Saturday'.split(',');
 
     'bin/us/2018/index.html'.saveContent(renderAll({
@@ -97,11 +106,23 @@ class Render {
           link: or(v.frontmatter.link, 'https://github.com/${v.id}'),
           bio: new Html(Markdown.markdownToHtml(v.markdown)),
           talks: [for (t in talks) if (t.speakers != null && t.speakers.indexOf(v.id) != -1) t],
+          interview: getInterviewBySpeaker(v.id,interviews),
         }:Speaker))),
         function (a, b) return a.order - b.order
       )
     }));
 
+  }
+  private static function getInterviewBySpeaker(speakerId:String, interviews:Array<Interview>):Interview{
+    var result:Interview = null;
+    for(interview in interviews){
+      if(interview.speaker == speakerId){
+        trace(interview.speaker);
+        result = interview;
+        break;
+      }
+    }
+    return result;
   }
 
   static function sorted<A>(a:Array<A>, f) {
