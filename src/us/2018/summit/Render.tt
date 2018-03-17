@@ -152,7 +152,7 @@
                         <h2>(: s.fullName :)</h2>
                         <h3>(: s.jobTitle :)</h3>
                         <div class="bio">(: s.bio :)</div>
-                        <h4>Sessions held by (: s.shortName :):</h4>
+                        <h2>Sessions held by (: s.shortName :)</h2>
                         <ul class="talks">
                             (: for t in s.talks :)
                             <li>
@@ -166,7 +166,7 @@
                             (: end :)
                         </ul>
                         (: if s.interview != null :)
-                        <h4>Speaker interview</h4>
+                        <h2>Speaker interview</h2>
                         <div>(: s.interview.description :)</div>
                         <a class="big_button full" href="" onclick="document.getElementById('(: id :)').checked = false">close</a>
                         (: end :)
