@@ -603,8 +603,8 @@ section.schedule {
       
       .talks {
         position: relative;
-        height: 450 * @pxpm;
-        margin: 0 20px 30px;
+        height: 500 * @pxpm;
+        margin: 80px 20px 30px;
         >li {
           list-style: none;
           position: absolute;
@@ -724,15 +724,21 @@ section.schedule {
     
     padding: 10px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     @media (min-width: 600px) {
       flex-wrap: wrap;
       display: flex;
+      justify-content: center;
       >li {
         flex-basis: 50%;
       }
     }
     text-align: center;
+    @media (min-width: 1000px) {
+      >li {
+        flex-basis: 33%;
+      }
+    }
     >li {
       margin-bottom: 2em;
       list-style: none;
