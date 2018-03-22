@@ -1,7 +1,8 @@
 ---
 speakers: ["laurent"]
-starts: 2017-09-16 11:30:00
+starts: 2018-05-03 14:00:00
 duration: 45
+track: "B"
 ---
 
 # A deep dive into hexUnit

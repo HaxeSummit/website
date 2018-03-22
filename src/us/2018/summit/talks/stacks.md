@@ -1,7 +1,8 @@
 ---
 speakers: ["jeff"]
-starts: 2017-09-16 11:30:00
-duration: 45
+starts: 2018-05-04 16:00:00
+duration: 105
+track: "A"
 ---
 
 # Better stacks with Haxe: Let’s build a web app from the ground up

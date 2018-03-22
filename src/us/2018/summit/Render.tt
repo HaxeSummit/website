@@ -77,7 +77,7 @@
             (: section('Tickets', tickets) :)
             (:* section('Stream', stream) *:)
             (: section('Location', location) :)
-            (: section('Schedule', pendingSchedule) :)
+            (: section('Schedule', schedule(conf)) :)
             (: footer :)
         </main>
         (: end :)

@@ -1,7 +1,8 @@
 ---
 speakers: ["francis"]
-starts: 2017-09-14 10:50:00
+starts: 2018-05-03 14:00:00
 duration: 45
+track: "A"
 ---
 
 # Consuming injections with minimal dependencies

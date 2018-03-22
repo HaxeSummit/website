@@ -1,7 +1,6 @@
 ---
-starts: 2017-09-16 16:05:00
-duration: 55
-track: "A"
+starts: 2018-05-05 16:30:00
+duration: 30
 ---
 
 # Open Q&A with the team

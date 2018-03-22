@@ -1,8 +1,8 @@
 ---
 speakers: ["ncannasse"]
-starts: 2017-09-14 15:05:00
-duration: 115
-track: "A"
+starts: 2018-05-05 10:00:00
+duration: 105
+track: "B"
 ---
 
 # Making games with Heaps.io

@@ -1,6 +1,6 @@
 ---
 speakers: ["dan"]
-starts: 2017-09-16 11:30:00
+starts: 2018-05-03 10:30:00
 duration: 45
 ---
 

@@ -83,10 +83,10 @@ class Render {
       })
       );
 
-    var names = 'Wednesday,Thursday,Friday,Saturday'.split(',');
+    var names = 'Thursday,Friday,Saturday'.split(',');
 
     'bin/us/2018/index.html'.saveContent(renderAll({
-      days: [for (day in 13...17) {
+      days: [for (day in 3...6) {
         {
           name: names.shift(),
         talks: [for (t in talks) if (t.starts.getDate() == day) t],

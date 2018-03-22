@@ -1,6 +1,6 @@
 ---
 speakers: ["alan"]
-starts: 2017-09-16 11:30:00
+starts: 2018-05-05 13:00:00
 duration: 45
 ---
 

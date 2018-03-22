@@ -1,7 +1,8 @@
 ---
 speakers: ["lars"]
-starts: 2017-09-15 10:50:00
-duration: 115
+starts: 2018-05-03 16:00:00
+duration: 105
+track: "A"
 ---
 
 # Hands on with HaxeFlixel

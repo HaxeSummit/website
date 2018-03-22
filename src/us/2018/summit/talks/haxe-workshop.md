@@ -1,7 +1,8 @@
 ---
 speakers: ["andy"]
-starts: 2017-09-16 11:30:00
-duration: 180
+starts: 2018-05-05 10:00:00
+duration: 105
+track: "A"
 ---
 
 # Introductory Haxe workshop

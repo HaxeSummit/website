@@ -1,7 +1,7 @@
 ---
-speakers: ["InnoGames"]
-starts: 2017-09-15 12:00:00
-duration: 60
+speakers: [""]
+starts: 2018-05-05 12:00:00
+duration: 55
 ---
 
 # Lunch
