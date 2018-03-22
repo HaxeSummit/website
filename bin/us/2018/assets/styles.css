@@ -552,13 +552,13 @@ section.location div.details .gallery {
 section.schedule ol.days {
   padding: 10px;
   width: 100%;
-  max-width: 800px;
+  max-width: 1200px;
   text-align: center;
 }
 section.schedule ol.days > li .talks {
   position: relative;
-  height: 900px;
-  margin: 0 20px 30px;
+  height: 1000px;
+  margin: 80px 20px 30px;
 }
 section.schedule ol.days > li .talks > li {
   list-style: none;
@@ -845,9 +845,15 @@ section.schedule ol.days h1 {
   section.schedule ol.days {
     flex-wrap: wrap;
     display: flex;
+    justify-content: center;
   }
   section.schedule ol.days > li {
     flex-basis: 50%;
+  }
+}
+@media (min-width: 1000px) {
+  section.schedule ol.days > li {
+    flex-basis: 33%;
   }
 }
 section.schedule ol.days > li {
