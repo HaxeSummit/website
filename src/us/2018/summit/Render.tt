@@ -322,7 +322,7 @@
 
                     <li class="gold">
                         <h2>Gold</h2>
-                        <h4>10000€</h4>
+                        <h4>10000$</h4>
                         <ul>
                             <li>Sole branding for an official show party (day 1, 2, or 3)</li>
                             <li>One sponsored session</li>
@@ -336,7 +336,7 @@
 
                     <li class="silver">
                         <h2>Silver</h2>
-                        <h4>5000€</h4>
+                        <h4>5000$</h4>
                         <ul>
                             <li>One sponsored session</li>
                             <li>Sole branding for one lunch</li>
@@ -350,7 +350,7 @@
 
                     <li class="lunch">
                         <h2>Bronze</h2>
-                        <h4>3000€</h4>
+                        <h4>3000$</h4>
                         <ul>
                             <li>One sponsored session</li>
                             <li>2 prepaid registrations</li>
@@ -360,7 +360,7 @@
                     </li>
                     <li class="event">
                         <h2>Track</h2>
-                        <h4>2000€</h4>
+                        <h4>2000$</h4>
                         <ul>
                             <li>Branding on the website</li>
                             <li>Branding on the show brochure</li>
@@ -409,7 +409,6 @@
                 (: end :)
 
                 (: static var tickets :)
-                <h2>Early Bird tickets are available</h2>
                 <div id="eventbrite-widget-container-41440951000" class="eventbrite"></div>
 
                 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>

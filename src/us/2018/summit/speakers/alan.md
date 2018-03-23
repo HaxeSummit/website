@@ -2,7 +2,7 @@
 fullName: 'Allan Dowdeswell'
 shortName: 'Allan'
 image: 'assets/speakers/allan.jpg'
-jobTitle: ''
+jobTitle: 'Chief at Confidant Communications'
 link: 'https://twitter.com/https://www.dropbox.com/s/dzkup5ktd3psyin/allan-nice-photo.jpg?dl=0'
 order: 9900
 ---
