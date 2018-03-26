@@ -111,27 +111,6 @@
 
         (: static function speakers(speakerList:Array
         <Speaker>) :)
-            <h2>Call for Speakers</h2>
-            <p>The call to speakers is open until the end of February. Please use the form below to submit your
-                proposal. We will let you know if your proposal is accepted as soon as possible.</p>
-            <p>You can submit a proposal for a quick 15 minute talk, a conference talk of 45 minutes or a workshop of 2
-                hours. We are looking for submissions for different audience levels - beginner, intermediate and
-                advanced. In terms of topics, here are some categories we are considering:
-            </p>
-            <ul class="vertical_list">
-                <li>Game</li>
-                <li>Web</li>
-                <li>Mobile & IOT</li>
-                <li>Mind the Geek</li>
-                <li>Programming</li>
-            </ul>
-            <p>Please make sure to include all the relevant details in your proposal. Of course, you can submit several
-                proposals if you can not decide on a topic.</p>
-            <p>As a speaker, you will get a lot of community appreciation, a big thank you and free access to the
-                conference.</p>
-            <a class="big_button" target="_blank"
-               href="https://docs.google.com/forms/d/e/1FAIpQLScrDxd75T8icKshJ3sRu-mskE4I-iCGK_m__DtUTQp5G5TqUQ/viewform">Send
-                a Proposal</a>
             <ul>
                 (: for s in speakerList :)
                 (: var id = 'speaker-' + s.id :)
