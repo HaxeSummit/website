@@ -2,7 +2,7 @@
 fullName: 'David Mouton'
 shortName: 'David'
 image: 'https://s.gravatar.com/avatar/e76bf16c538e0b6a6329fd398e630f89?size=496&default=retro'
-jobTitle: 'Haxe Web Architect'
+jobTitle: 'Software Architect at Onepoint'
 link: 'https://twitter.com/damoebius'
 order: 2000
 ---
