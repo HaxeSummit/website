@@ -1,7 +1,7 @@
 ---
 speakers: ["david"]
-starts: 2018-05-05 14:00:00
-duration: 105
+starts: 2018-05-04 14:30:00
+duration: 85
 ---
 
 # Code Of War

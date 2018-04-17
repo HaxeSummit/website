@@ -1,7 +1,7 @@
 ---
 speakers: ["robert"]
-starts: 2018-05-04 11:00:00
-duration: 15
+starts: 2018-05-03 10:30:00
+duration: 45
 ---
 
 # Kha & OpenFL

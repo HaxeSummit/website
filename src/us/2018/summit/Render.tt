@@ -29,7 +29,7 @@
                 <div class="details">
                     <label for="nospeaker">Close</label>
                     <h1>(: t.title :)</h1>
-                    <h3>(: t.starts.format('Sept %d @ %H:%M') :) - (:
+                    <h3>(: t.starts.format('May %d @ %H:%M') :) - (:
                         t.starts.delta(t.duration.minutes()).format('%H:%M')
                         :)</h3>
                     (: t.description :)

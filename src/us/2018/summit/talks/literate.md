@@ -1,7 +1,8 @@
 ---
 speakers: ["twebb"]
-starts: 2018-05-04 15:00:00
+starts: 2018-05-03 15:00:00
 duration: 45
+track: "B"
 ---
 
 # Literate Programming with Haxe

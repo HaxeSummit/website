@@ -1,6 +1,6 @@
 ---
 speakers: ["jeff"]
-starts: 2018-05-04 16:00:00
+starts: 2018-05-03 16:00:00
 duration: 105
 track: "A"
 ---
