@@ -1,6 +1,6 @@
 ---
 speakers: ["joshua"]
-starts: 2018-05-04 16:00:00
+starts: 2018-05-04 15:00:00
 duration: 105
 ---
 

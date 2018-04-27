@@ -1,7 +1,7 @@
 ---
 speakers: ["justin"]
-starts: 2018-05-04 11:30:00
-duration: 15
+starts: 2018-05-04 14:00:00
+duration: 45
 ---
 
 # Golgi : Fast cross platform routing and dispatch

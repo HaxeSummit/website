@@ -1,6 +1,6 @@
 ---
 speakers: ["adam"]
-starts: 2018-05-04 14:00:00
+starts: 2018-05-04 11:30:00
 duration: 15
 ---
 
