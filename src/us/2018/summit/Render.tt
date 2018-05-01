@@ -75,7 +75,7 @@
             (: section('Speakers', speakers(conf.speakers)) :)
             (:* section('Speakers', speakers([])) *:)
             (: section('Tickets', tickets) :)
-            (:* section('Stream', stream) *:)
+            (: section('Stream', stream) :)
             (: section('Location', location) :)
             (: section('Schedule', schedule(conf)) :)
             (: footer :)
