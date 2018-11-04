@@ -1,13 +1,13 @@
 {
-  "name": "haxe-summit-2017-website",
+  "name": "haxe-summit-website",
   "version": "1.0.0",
   "scripts": {
     "start": "http-server docs -c5",
-    "clean": "rm -r docs/*",
+    "clean": "rm -r docs/us/2019/*",
     "build": "npm run clean && npm run build.client && npm run build.website && npm run build.assets",
-    "build.assets": "cp -r bin/* docs",
+    "build.assets": "cp -r bin/us/2019/* docs/us/2019",
     "build.client": "haxe client.hxml",
-    "build.website": "haxe website.hxml && lessc src/us/2018/summit/styles.less bin/us/2018/assets/styles.css",
+    "build.website": "haxe website.hxml && lessc src/us/2019/summit/styles.less bin/us/2019/assets/styles.css",
     "postinstall": "lix download && npm run build.client"
   },
   "repository": {

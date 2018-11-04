@@ -1,0 +1,432 @@
+(: static function renderDay(name, talks:Array
+<Talk>, speakers:Map
+    <String
+            , Speaker>) :)
+        <h2>(: name :)</h2>
+        <ol class="talks">
+            (: for t in talks :)
+            <li data-track="(: t.track :)" data-starts="(: t.starts.format('%k:%M').trim() :)"
+                data-duration="(: t.duration :)">
+                <label (: if t.title !="TBA" && t.title !="Lunch" :)for="talk-(: t.id :)" (: end :)>
+                    (: if t.title.toString().length > 30 && t.duration < 30 :)
+                    <small>(: t.title :)</small>
+                    (: else :)
+                    <span class="title">
+              (: t.title :)
+            </span>
+                    (: if t.title == "Lunch" :)
+                    <span class="sponsor">(: t.speakers[0] :)</span>
+                    (: end :)
+                    (: end :)
+                    <time datetime="(: t.starts :)">
+                        <span>(: t.starts.format('%H:%M') :)</span>
+                        <span>(: t.starts.delta(t.duration.minutes()).format('%H:%M') :)</span>
+                    </time>
+                </label>
+                (: var id = 'talk-' + t.id :)
+                <input id="(: id :)" type="radio" name="current-speaker"/>
+                (: if t.title != "TBA" && t.title != "Lunch" :)
+                <div class="details">
+                    <label for="nospeaker">Close</label>
+                    <h1>(: t.title :)</h1>
+                    <h3>(: t.starts.format('May %d @ %H:%M') :) - (:
+                        t.starts.delta(t.duration.minutes()).format('%H:%M')
+                        :)</h3>
+                    (: t.description :)
+                    (: if t.speakers != null && t.speakers.length > 0 :)
+                    <h4>Presented by:</h4>
+                    <ul class="speakers">
+                        (: for s in t.speakers :)
+                        <label for="speaker-(: s :)">
+                            (: var s = speakers[s] :)
+                            <div class="image">
+                                <img src="(: s.image :)">
+                            </div>
+                            <h2>(: s.fullName :)</h2>
+                            <h3>(: s.jobTitle :)</h3>
+                        </label>
+                        (: end :)
+                    </ul>
+                    (: end :)
+                </div>
+                (: end :)
+            </li>
+            (: end :)
+        </ol>
+        (: end :)
+
+        (: static var ticketsSold :)
+        <p>Early Bird tickets are available. In the meantime, you can already book your accommodation</p>
+        <a class="big_button" target="_blank"
+           href="https://www.eventbrite.com/e/haxe-summit-usa-2019-tickets-41440951000?aff=HaxeWebsite">Get your
+            ticket</a>
+
+        (: end :)
+
+        (: static function renderAll(conf:Conference) :)
+
+        (: var content :)
+        <input id="nospeaker" type="radio" name="current-speaker" checked/>
+        <main>
+            (: nav :)
+            (: header :)
+            (: intro :)
+            (: section('Partners', partners) :)
+            (:* section('Speakers', speakers(conf.speakers)) *:)
+            (: section('Speakers', speakers([])) :)
+            (: section('Tickets', tickets) :)
+            (:* section('Stream', stream) *:)
+            (: section('Location', location) :)
+            (: section('Schedule', pendingSchedule) :)
+            (: footer :)
+        </main>
+        (: end :)
+
+        (: document(
+        'Haxe Summit 2019 in Seattle',
+        content,
+        [
+        "og:image" => "assets/banner.png",
+        "og:title" => "US Haxe Summit 2019",
+        "og:url" => "https://summit.haxe.org/us/2019"
+        ]
+        ) :)
+
+        (: end :)
+
+        (: static var stream :)
+        <iframe src="https://player.twitch.tv/?channel=haxesummit&amp;autoplay=false" frameborder="0"
+                allowfullscreen="true"
+                scrolling="no" height="378" width="620"></iframe>
+        <a href="https://www.twitch.tv/haxesummit?tt_medium=live_embed&tt_content=text_link"
+           style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch
+            live video from haxesummit on www.twitch.tv</a>
+        <h2 style="margin: 50px 0">Second Track</h2>
+        <iframe id="stream2" src="https://player.twitch.tv/?channel=haxesummit2&amp;autoplay=false" frameborder="0"
+                allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+        <a target="_blank" href="https://www.twitch.tv/haxesummit?tt_medium=live_embed&tt_content=text_link"
+           style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch
+            live video from haxesummit on www.twitch.tv</a>
+        (: end :)
+
+        (: static function speakers(speakerList:Array
+                <Speaker>) :)
+                    <h2>Call for speakers</h2>
+                    <p>
+                    Are you :
+                    <ul>
+                        <li> doing something exciting with Haxe that you would love to tell us about </li>
+                        <li> solving  a pesky problem (workflows and tooling, anyone?);</li>
+                        <li> looking to pass on some Haxian wisdom?</li>
+                    </ul>
+                    </p>
+                    <p>Then we would love to hear from you!</p>
+                    <p>We are interested in quick showcases, more thorough presentations and full workshops.</p>
+                    <p>Not sure if you should get up on that stage? Apply anyway! We will help you figure it out.</p>
+                    <a class="big_button" href="https://goo.gl/forms/VLb6L2wam412oQwj2">Speak Up!</a>
+
+                    (: end :)
+
+
+            (: static function document(title, body, ?meta:Map
+            <String
+                    , String>) :)
+                <!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="utf-8">
+                    <title>(: title :)</title>
+                    <link rel="stylesheet" href="assets/styles.css">
+                    <link href='https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900'
+                          rel='stylesheet' type='text/css'>
+                    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+                          rel='stylesheet'
+                          type='text/css'>
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <meta name="twitter:image" content="https://summit.haxe.org/us/2019/assets/banner-twitter.jpg">
+                    <meta name="twitter:title" content="US Haxe Summit 2019">
+                    <meta name="twitter:card" content="summary_large_image">
+                    <meta name="twitter:url" content="https://summit.haxe.org/us/2019"/>
+                    <link rel="icon" href="assets/favicon.png" type="image/png"/>
+                    (: if meta != null :)
+                    (: for k in meta.keys() :)
+                    <meta property="(: k :)" content="(: meta[k] :)"/>
+                    (: end :)
+                    (: end :)
+                    <!-- Google Tag Manager -->
+                    <script>(function ( w, d, s, l, i ) {
+                        w[l] = w[l] || [];
+                        w[l].push({
+                            'gtm.start':
+                                    new Date().getTime(), event: 'gtm.js'
+                        });
+                        var f = d.getElementsByTagName(s)[0],
+                                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+                        j.async = true;
+                        j.src =
+                                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                        f.parentNode.insertBefore(j, f);
+                    })(window, document, 'script', 'dataLayer', 'GTM-MFG5SKN');</script>
+                    <!-- End Google Tag Manager -->
+                </head>
+                <body>
+                (: body :)
+                <!-- Google Tag Manager (noscript) -->
+                <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFG5SKN"
+                            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                </noscript>
+                <!-- End Google Tag Manager (noscript) -->
+                <script src="assets/script.js"></script>
+                <script type="text/javascript">
+                    function startsWith( str, searchString ) {
+                        return str.substr(0, searchString.length) === searchString;
+                    }
+
+                    if ( !startsWith(location.href, "https://summit.haxe.org/us/2019") && location.href.indexOf("localhost") < 0 ) {
+                        window.location.replace("https://summit.haxe.org/us/2019/");
+                    }
+                </script>
+                </body>
+                </html>
+                (: end :)
+
+                (: static var nav :)
+                <nav>
+                    <script>document.querySelector('nav').className = 'transparent'</script>
+                    <ul>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#partners">Partners</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
+                        <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="mailto:events@haxe.org">Contact</a></li>
+                    </ul>
+                    <a href="/#start"><img src="./assets/favicon.png">Back To Top</a>
+                </nav>
+                (: end :)
+
+                (: static var header :)
+                <a name="start"></a>
+                <header>
+
+                    <h1>
+      
+      <span>
+        <strong>Haxe</strong>
+        US-Summit
+      </span>
+                        <img src="assets/logo-transparent.png">
+                        <span class="year">2019</span>
+
+                    </h1>
+                    <h3>May 8-10 <span>@</span> Seattle</h3>
+                    <a class="tickets" target="_blank" href="https://twitter.com/HaxeSummit">
+                        Follow Us
+                    </a>
+                </header>
+                (: end :)
+
+                (: static function section(title:String, content) :)
+                (: var id = title.toLowerCase().replace(' ', '-') :)
+                <a name="(: id :)">&nbsp;</a>
+                <section class="(: id :)">
+                    <h1><a href="#(: id :)">(: title :)</a></h1>
+                    (: content :)
+                </section>
+                (: end :)
+
+                (: static var intro :)
+                <section class="intro">
+                    <h2>Join us</h2>
+
+                    <p>The US Haxe Summit is a three day event which will take place in Seattle in May 2019. It is the main Haxe Community Event in the US and a great meeting spot for the people who create Haxe, people who work with it or people who are new to Haxe and want to explore it.</p>
+
+                    <p>We will have a mix of presentations and workshops about topics ranging from game development with Haxe to things you can get up to on the Web.</p>
+                    <p>Join us to:
+                        <ul>
+                            <li>meet the people who create the Haxian tech you are using</li>
+                            <li>connect with other developers who may know a thing or two about Haxe that you don’t</li>
+                            <li>get a fresh boost of inspiration and motivation.</li>
+                        </ul>
+                    </p>
+                    <p>And all of that even before the conference party has worked its magic.
+                       </p>
+                    <p>See you soon!</p>
+                </section>
+                (: end :)
+
+                (: static var partners :)
+                <p>The Haxe Summit is like a yearly dose of fresh energy for the Haxe community and the makers of Haxe. Help us put on a good show and grow the community. Who knows, you might even meet your future Haxe developer while you are enjoying the Summit with us!</p>
+
+                <h3>Sponsor the Event</h3>
+
+                <p>t.b.d.</p>
+
+                <p>Are you interested in sponsoring this event? Awesome, we would love to hear from you.</p>
+                <a class="big_button" href="mailto:events@haxe.org">sponsor the event</a>
+                (: end :)
+
+                (: static var footer :)
+                <section class="footer">
+                    <h1><a href="#contact">CONTACT</a></h1>
+                    <p>Do you have any questions or suggestions? Don’t hesitate to let us know.</p>
+                    <a class="big_button" href="mailto:events@haxe.org">contact us</a>
+                </section>
+                (: end :)
+
+                (: static var location :)
+                <p>The conference will take place at Seattle
+                    Downtown, more details coming soon</p>
+
+                (: end :)
+
+                (: static var tickets :)
+                <p>t.b.a.</p>
+                (: end :)
+
+                (: static function schedule(conf:Conference) :)
+                (: var speakers = [for (s in conf.speakers) s.id => s] :)
+                <ol class="days">
+                    (: for d in conf.days :)
+                    <li>
+                        (: renderDay(d.name, d.talks, speakers) :)
+                    </li>
+                    (: end :)
+                </ol>
+                <a class="big_button" href="assets/Haxe_Speaker-Schedule_Mobile.pdf">download in pdf</a>
+                (: end :)
+
+                (: static var pendingSchedule :)
+                <p>
+                    Not yet available
+                </p>
+                <ol class="days">
+
+
+                    <li>
+                        <ol class="talks">
+
+                            <li data-track="null" data-starts="9:30" data-duration="55">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Keynote
+                                </span>
+                                    <time datetime="2017-09-14 9:30:00">
+                                        <span>9:30</span>
+                                        <span>10:30</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="A" data-starts="10:30" data-duration="85">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Conferences
+                                </span>
+                                    <time datetime="2017-09-14 10:30:00">
+                                        <span>10:30</span>
+                                        <span>12:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="B" data-starts="10:30" data-duration="85">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Conferences
+                                </span>
+                                    <time datetime="2017-09-14 10:30:00">
+                                        <span>10:30</span>
+                                        <span>12:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="C" data-starts="10:30" data-duration="85">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Conferences
+                                </span>
+                                    <time datetime="2017-09-14 10:30:00">
+                                        <span>10:30</span>
+                                        <span>12:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="null" data-starts="12:00" data-duration="55">
+                                <label>
+
+                    <span class="title">
+              Lunch
+            </span>
+
+                                    <time datetime="2017-09-14 12:00:00">
+                                        <span>12:00</span>
+                                        <span>13:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="A" data-starts="13:00" data-duration="180">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Workshop
+                                </span>
+                                    <time datetime="2017-09-14 13:00:00">
+                                        <span>13:00</span>
+                                        <span>17:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="B" data-starts="13:00" data-duration="180">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Workshop
+                                </span>
+                                    <time datetime="2017-09-14 13:00:00">
+                                        <span>13:00</span>
+                                        <span>17:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                            <li data-track="C" data-starts="13:00" data-duration="180">
+                                <label for="talk-hxcpp-externs">
+
+                                <span class="title">
+                                  Workshop
+                                </span>
+                                    <time datetime="2017-09-14 13:00:00">
+                                        <span>13:00</span>
+                                        <span>17:00</span>
+                                    </time>
+                                </label>
+
+                            </li>
+
+                        </ol>
+
+                    </li>
+
+                </ol>
+                <p>
+                    &hellip; and the occasional evening party of course!
+                </p>
+
+                (: end :)
