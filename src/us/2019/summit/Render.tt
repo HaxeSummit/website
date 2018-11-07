@@ -71,9 +71,9 @@
             (: nav :)
             (: header :)
             (: intro :)
-            (: section('Partners', partners) :)
             (:* section('Speakers', speakers(conf.speakers)) *:)
-            (: section('Speakers', speakers([])) :)
+            (: speakup :)
+            (: partners :)
             (: section('Tickets', tickets) :)
             (:* section('Stream', stream) *:)
             (: section('Location', location) :)
@@ -111,7 +111,6 @@
 
         (: static function speakers(speakerList:Array
                 <Speaker>) :)
-                    <h2>Call for speakers</h2>
                     <p>
                     Are you :
                     <ul>
@@ -195,11 +194,11 @@
                 <nav>
                     <script>document.querySelector('nav').className = 'transparent'</script>
                     <ul>
-                        <li><a href="#location">Location</a></li>
-                        <li><a href="#partners">Partners</a></li>
-                        <li><a href="#speakers">Speakers</a></li>
                         <li><a href="#tickets">Tickets</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#speakers">Speakers</a></li>
                         <li><a href="#schedule">Schedule</a></li>
+                        <li><a href="#partners">Partners</a></li>
                         <li><a href="mailto:events@haxe.org">Contact</a></li>
                     </ul>
                     <a href="/#start"><img src="./assets/favicon.png">Back To Top</a>
@@ -221,9 +220,6 @@
 
                     </h1>
                     <h3>May 8-10 <span>@</span> Seattle</h3>
-                    <a class="tickets" target="_blank" href="https://twitter.com/HaxeSummit">
-                        Follow Us
-                    </a>
                 </header>
                 (: end :)
 
@@ -238,8 +234,7 @@
 
                 (: static var intro :)
                 <section class="intro">
-                    <h2>Join us</h2>
-
+                    <h1><a href="#intro">JOIN US!</a></h1>
                     <p>The US Haxe Summit is a three day event which will take place in Seattle in May 2019. It is the main Haxe Community Event in the US and a great meeting spot for the people who create Haxe, people who work with it or people who are new to Haxe and want to explore it.</p>
 
                     <p>We will have a mix of presentations and workshops about topics ranging from game development with Haxe to things you can get up to on the Web.</p>
@@ -257,14 +252,16 @@
                 (: end :)
 
                 (: static var partners :)
+                <a name="partners">&nbsp;</a>
+                <section class="partners">
+                    <h1><a href="#partners">CHIP IN!</a></h1>
                 <p>The Haxe Summit is like a yearly dose of fresh energy for the Haxe community and the makers of Haxe. Help us put on a good show and grow the community. Who knows, you might even meet your future Haxe developer while you are enjoying the Summit with us!</p>
 
                 <h3>Sponsor the Event</h3>
 
-                <p>t.b.d.</p>
-
                 <p>Are you interested in sponsoring this event? Awesome, we would love to hear from you.</p>
                 <a class="big_button" href="mailto:events@haxe.org">sponsor the event</a>
+                </section>
                 (: end :)
 
                 (: static var footer :)
@@ -275,6 +272,25 @@
                 </section>
                 (: end :)
 
+                (: static var speakup :)
+                <a name="speakers">&nbsp;</a>
+                <section class="speakers">
+                    <h1><a href="#speakers">SPEAK UP!</a></h1>
+                    <p>
+                        Are you :
+                    <ul>
+                        <li> doing something exciting with Haxe that you would love to tell us about </li>
+                        <li> solving  a pesky problem (workflows and tooling, anyone?);</li>
+                        <li> looking to pass on some Haxian wisdom?</li>
+                    </ul>
+                    </p>
+                    <p>Then we would love to hear from you!</p>
+                    <p>We are interested in quick showcases, more thorough presentations and full workshops.</p>
+                    <p>Not sure if you should get up on that stage? Apply anyway! We will help you figure it out.</p>
+                    <a class="big_button" href="https://goo.gl/forms/VLb6L2wam412oQwj2">Speak Up!</a>
+                </section>
+                (: end :)
+
                 (: static var location :)
                 <p>The conference will take place at Seattle
                     Downtown, more details coming soon</p>
@@ -282,7 +298,7 @@
                 (: end :)
 
                 (: static var tickets :)
-                <p>t.b.a.</p>
+                <p>Not yet available</p>
                 (: end :)
 
                 (: static function schedule(conf:Conference) :)
