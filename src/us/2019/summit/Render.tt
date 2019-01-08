@@ -298,7 +298,27 @@
                 (: end :)
 
                 (: static var tickets :)
-                <p>Not yet available</p>
+                <p>Take advantage of our early bird pricing now!</p>
+                <div id="eventbrite-widget-container-53756271455" class="eventbrite"></div>
+
+                <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+
+                <script type="text/javascript">
+                    var exampleCallback = function () {
+                        console.log('Order complete!');
+                    };
+
+                    window.EBWidgets.createWidget({
+                        // Required
+                        widgetType: 'checkout',
+                        eventId: '53756271455',
+                        iframeContainerId: 'eventbrite-widget-container-53756271455',
+
+                        // Optional
+                        iframeContainerHeight: 455,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+                        onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+                    });
+                </script>
                 (: end :)
 
                 (: static function schedule(conf:Conference) :)
