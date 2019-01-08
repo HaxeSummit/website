@@ -159,12 +159,12 @@ section.tickets h1:before {
 }
 section.tickets p {
   text-align: center;
-  margin-top: 30px;
+  /*margin-top: 30px;*/
 }
 section.tickets .countdown {
   margin-top: 2em;
   width: 400px;
-  height: 400px;
+  height: 305px;
   border-radius: 400px;
   background: crimson;
   display: flex;
