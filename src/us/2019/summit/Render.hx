@@ -57,7 +57,7 @@ class Render {
     { //skip irrelevant warnings from yaml lib
       var old = haxe.Log.trace;
       haxe.Log.trace = function (msg, ?pos:haxe.PosInfos)
-      if (pos != null && pos.fileName != 'YTimestamp.hx') old(msg, pos);
+      if (pos != null && pos.fileName.split('/').pop() != 'YTimestamp.hx') old(msg, pos);
     }
     var talks =
     sorted(
