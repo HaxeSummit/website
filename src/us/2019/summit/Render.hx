@@ -153,21 +153,19 @@ class Render {
         switch content.indexOf('---\n', 3) {
           case -1: None;
           case v:
-            var data:A =
-            try
-            yaml.Yaml.parse(
-              content.substring(4, v),
-              new yaml.Parser.ParserOptions().useObjects()
-            )
+            try 
+              Some({
+                frontmatter: (yaml.Yaml.parse(
+                  content.substring(4, v),
+                  new yaml.Parser.ParserOptions().useObjects()
+                ):A),
+                markdown: content.substr(v + 4)
+              })
             catch (e:Dynamic) {
               Sys.println('invalid frontmatter in $path:\n$e');
               Sys.exit(500);
               None;
             }
-            Some({
-              frontmatter: data,
-              markdown: content.substr(v + 4),
-            });
         }
       else None;
   }
