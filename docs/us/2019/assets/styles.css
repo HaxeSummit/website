@@ -56,7 +56,7 @@ a[name] {
 }
 nav {
   background-color: #1c0308;
-  transition: all .25s;
+  transition: all 0.25s;
   position: fixed;
   z-index: 10;
   color: white;
@@ -147,7 +147,7 @@ section.tickets h1:before {
   letter-spacing: 0;
   display: block;
   font-weight: 900;
-  font-size: .7em;
+  font-size: 0.7em;
   background-color: rgba(255, 255, 255, 0.65);
   z-index: 1;
   border: 5px dashed rgba(220, 20, 60, 0.8);
@@ -189,7 +189,7 @@ section.tickets .countdown .components {
 }
 section.tickets .countdown:not(.nodisplay) .hours:after,
 section.tickets .countdown .minutes:after {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-name: pulse;
@@ -219,15 +219,15 @@ header h1 {
 }
 header h1 img {
   height: 1.25em;
-  margin-left: .075em;
-  margin-right: .15em;
+  margin-left: 0.075em;
+  margin-right: 0.15em;
 }
 header h1 span:first-child {
   position: relative;
   margin-left: 2.5em;
   margin-right: 0.5em;
   text-transform: uppercase;
-  font-size: .2em;
+  font-size: 0.2em;
   letter-spacing: 0.28em;
 }
 header h1 span:first-child strong {
@@ -238,7 +238,7 @@ header h1 span:first-child strong {
   display: block;
 }
 header h1 .year {
-  line-height: .75em;
+  line-height: 0.75em;
 }
 @media (max-width: 800px) {
   header h1 {
@@ -256,11 +256,11 @@ header h3 {
   text-align: center;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: .5em;
+  letter-spacing: 0.5em;
 }
 @media (max-width: 600px) {
   header h3 {
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
   }
 }
 header a.powered-by {
@@ -272,7 +272,7 @@ header a.powered-by {
   text-align: center;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.4);
-  transition: all .25s;
+  transition: all 0.25s;
   transform-origin: 100% 100%;
 }
 @media (max-width: 600px) {
@@ -295,7 +295,7 @@ header a.powered-by:hover img {
   filter: none;
 }
 header a.powered-by img {
-  margin-top: .05em;
+  margin-top: 0.05em;
   display: block;
   filter: saturate(0) contrast(0);
   width: 120px;
@@ -303,13 +303,13 @@ header a.powered-by img {
 header a.tickets {
   white-space: nowrap;
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   position: absolute;
   background: crimson;
   color: white;
-  transition: all .25s;
+  transition: all 0.25s;
   text-decoration: none;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
   font-size: 28px;
   font-weight: 100;
   bottom: 0;
@@ -330,12 +330,12 @@ a:hover {
 a.big_button {
   white-space: nowrap;
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   background: crimson;
   color: white;
-  transition: all .25s;
+  transition: all 0.25s;
   text-decoration: none;
-  padding: .5em 1.5em;
+  padding: 0.5em 1.5em;
   font-size: 28px;
   font-weight: 100;
   bottom: 0;
@@ -356,7 +356,7 @@ section h1,
 section h2,
 section h3,
 section h4 {
-  padding: .5em;
+  padding: 0.5em;
   text-align: center;
   font-weight: 900;
 }
@@ -370,7 +370,7 @@ section h1 a[href^="#"]:before,
 section h2 a[href^="#"]:before,
 section h3 a[href^="#"]:before,
 section h4 a[href^="#"]:before {
-  transition: all .25s;
+  transition: all 0.25s;
   content: '#';
   display: block;
   position: absolute;
@@ -394,7 +394,7 @@ section h1 {
   font-size: 72px;
   font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
 }
 @media (max-width: 600px) {
   section h1 {
@@ -593,7 +593,7 @@ section.schedule ol.days > li .talks > li > label:not([for]) .title {
 }
 section.schedule ol.days > li .talks > li > label:not([for]) .sponsor {
   display: block;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: bold;
 }
 section.schedule ol.days > li .talks > li > label:not([for]) .sponsor:before {
@@ -614,11 +614,11 @@ section.schedule ol.days > li .talks > li > label > time {
   color: white;
 }
 section.schedule ol.days > li .talks > li > label > time > span {
-  font-size: .75em;
+  font-size: 0.75em;
 }
 section.schedule ol.days > li .talks > li > label > time > span:nth-of-type(2) {
-  font-size: .5em;
-  opacity: .75;
+  font-size: 0.5em;
+  opacity: 0.75;
 }
 section.schedule ol.days > li .talks > li[data-track="A"] {
   left: 0%;
@@ -1009,7 +1009,7 @@ input[type="radio"] ~ .details .talks > li h3 {
 }
 input[type="radio"] ~ .details .talks > li li {
   margin-left: 30px;
-  margin-bottom: .75em;
+  margin-bottom: 0.75em;
 }
 input[type="radio"] ~ .details .talks > li li p {
   margin-bottom: 0;
