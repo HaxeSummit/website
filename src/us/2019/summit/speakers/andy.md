@@ -2,9 +2,8 @@
 fullName: 'Andy Li'
 shortName: 'andy'
 image: 'https://en.gravatar.com/userimage/4167363/9f93993fd564f3a6a494a2faf984e9f8.jpg?size=400'
-jobTitle: 'Senior researcher at TCL Research'
-link: 'https://twitter.com/adambreece'
-order: 9800
+link: 'https://twitter.com/andy_li'
+order: 100
 ---
 
 Andy Li maintains continuous integration and software packages for the Haxe Foundation.

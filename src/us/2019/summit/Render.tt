@@ -71,7 +71,7 @@
             (: nav :)
             (: header :)
             (: intro :)
-            (:* section('Speakers', speakers(conf.speakers)) *:)
+            (: section('Speakers', speakers(conf.speakers)) :)
             (: speakup :)
             (: partners :)
             (: section('Tickets', tickets) :)
@@ -110,22 +110,48 @@
         (: end :)
 
         (: static function speakers(speakerList:Array
-                <Speaker>) :)
-                    <p>
-                    Are you :
-                    <ul>
-                        <li> doing something exciting with Haxe that you would love to tell us about </li>
-                        <li> solving  a pesky problem (workflows and tooling, anyone?);</li>
-                        <li> looking to pass on some Haxian wisdom?</li>
-                    </ul>
-                    </p>
-                    <p>Then we would love to hear from you!</p>
-                    <p>We are interested in quick showcases, more thorough presentations and full workshops.</p>
-                    <p>Not sure if you should get up on that stage? Apply anyway! We will help you figure it out.</p>
-                    <a class="big_button" href="https://goo.gl/forms/VLb6L2wam412oQwj2">Speak Up!</a>
-
-                    (: end :)
-
+        <Speaker>) :)
+            <ul>
+                (: for s in speakerList :)
+                (: var id = 'speaker-' + s.id :)
+                <li>
+                    <input id="(: id :)" type="radio" name="current-speaker"/>
+                    <label for="(: id :)">
+                        <div class="image">
+                            <img src="(: s.image :)">
+                        </div>
+                        <h3>(: s.fullName :)</h3>
+                    </label>
+                    <div class="details">
+                        <label for="nospeaker">Close</label>
+                        <div class="image">
+                            <img src="(: s.image :)">
+                        </div>
+                        <h2>(: s.fullName :)</h2>
+                        <div class="bio">(: s.bio :)</div>
+                        <h2>Sessions held by (: s.shortName :)</h2>
+                        <ul class="talks">
+                            (: for t in s.talks :)
+                            <li>
+                                <h3><label for="talk-(: t.id:)">(: t.title :)</label></h3>
+                                (: switch t.description.toString().indexOf("<"+"hr") :)
+                                (: case -1 :) (: t.description :)
+                                (: case v :)
+                                (: cast t.description.toString().substr(0, v) :)
+                                (: end :)
+                            </li>
+                            (: end :)
+                        </ul>
+                        (: if s.interview != null :)
+                        <h2>Speaker interview</h2>
+                        <div>(: s.interview.description :)</div>
+                        <a class="big_button full" href="" onclick="document.getElementById('(: id :)').checked = false">close</a>
+                        (: end :)
+                    </div>
+                </li>
+                (: end :)
+            </ul>
+            (: end :)
 
             (: static function document(title, body, ?meta:Map
             <String
@@ -273,8 +299,8 @@
                 (: end :)
 
                 (: static var speakup :)
-                <a name="speakers">&nbsp;</a>
-                <section class="speakers">
+                <a name="speakup">&nbsp;</a>
+                <section class="speakup">
                     <h1><a href="#speakers">SPEAK UP!</a></h1>
                     <p>
                         Are you :

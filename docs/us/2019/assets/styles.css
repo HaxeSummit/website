@@ -35,7 +35,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
   font-weight: 300;
 }
 .nodisplay {
@@ -52,7 +51,6 @@ a[name] {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: inherit;
 }
 nav {
   background-color: #1c0308;
@@ -346,7 +344,6 @@ a.big_button:hover {
 }
 section {
   overflow: hidden;
-  user-select: auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -1034,11 +1031,14 @@ section.speakers .vertical_list li {
   display: block;
 }
 section.speakers > ul {
-  margin: 0 auto;
-  max-width: 900px;
+  text-align: center;
+  padding-top: 50px;
 }
 section.speakers > ul > li {
+  list-style: none;
+  display: inline-block;
   vertical-align: top;
+  width: 240px;
   margin: 0 10px;
 }
 section.speakers > ul > li label {
@@ -1091,6 +1091,74 @@ section.speakers > ul > li .image img {
 }
 @media (max-width: 550px) {
   section.speakers > ul > li {
+    width: 180px;
+    margin: 0;
+  }
+}
+section.speakup .vertical_list {
+  margin-bottom: 20px;
+}
+section.speakup .vertical_list li {
+  display: block;
+}
+section.speakup > ul {
+  margin: 0 auto;
+  max-width: 900px;
+}
+section.speakup > ul > li {
+  vertical-align: top;
+  margin: 0 10px;
+}
+section.speakup > ul > li label {
+  cursor: pointer;
+}
+section.speakup > ul > li p {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+section.speakup > ul > li p sup {
+  font-style: italic;
+}
+section.speakup > ul > li p sup:before {
+  content: '[';
+  font-style: normal;
+}
+section.speakup > ul > li p sup:after {
+  content: ' ]';
+  font-style: normal;
+}
+section.speakup > ul > li p a {
+  font-weight: 900;
+}
+section.speakup > ul > li .image {
+  overflow: hidden;
+  display: inline-block;
+  background: crimson;
+  width: 160px;
+  height: 160px;
+  border-radius: 160px;
+  border: 8px solid #111;
+}
+section.speakup > ul > li .image a.add {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-size: 96px;
+  color: white;
+  font-weight: 900;
+}
+section.speakup > ul > li .image a.add:hover {
+  text-decoration: none;
+}
+section.speakup > ul > li .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 550px) {
+  section.speakup > ul > li {
     width: 180px;
     margin: 0;
   }

@@ -48,7 +48,6 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  user-select: none;
   font-weight: 300;
 }
 
@@ -68,7 +67,6 @@ a[name] {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  user-select: inherit;
 }
 
 nav {
@@ -371,7 +369,6 @@ a.big_button {
 
 section {
   overflow: hidden;
-  user-select: auto;
   padding-bottom: 50px;
   display: flex;
   flex-direction: column;
@@ -931,6 +928,94 @@ section.footer{
 }
 
 section.speakers {
+
+  .vertical_list{
+    margin-bottom: 20px;
+    li {
+      display: block;
+    }
+  }
+
+  >ul {
+    //margin: 0 auto;
+    //max-width: 900px;
+    text-align: center;
+    padding-top: 50px;
+
+
+    >li {
+      label {
+        cursor: pointer;
+      }
+
+      //background: lime;
+      list-style: none;
+      display: inline-block;
+      vertical-align: top;
+      width: 240px;
+      margin: 0 10px;
+
+      p {
+        margin-top: 0;
+        sup {
+          &:before {
+            content: '[';
+            font-style: normal;
+          }
+          font-style: italic;
+          &:after {
+            content: ' ]';
+            font-style: normal;
+          }
+        }
+        a {
+          font-weight: 900;
+        }
+        margin-bottom: 2em;
+      }
+
+      .image {
+        overflow: hidden;
+        display: inline-block;
+        background: @bright;
+        a.add {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          width: 100%;
+          height: 100%;
+          font-size: 96px;
+          color: white;
+          font-weight: 900;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        width: 160px;
+        height: 160px;
+        border-radius: 160px;
+        border: 8px solid #111;
+      }
+
+      @media (max-width: 550px) {
+        width: 180px;
+        margin: 0;
+        //.image {
+        //width: 100px;
+        //height: 100px;
+        //}
+      }
+
+    }
+  }
+}
+
+section.speakup {
 
   .vertical_list{
     margin-bottom: 20px;
