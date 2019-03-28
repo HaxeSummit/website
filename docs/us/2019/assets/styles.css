@@ -519,7 +519,7 @@ section.location div.details {
 }
 section.location div.details .map {
   position: relative;
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 section.location div.details .map input {
   display: none;
