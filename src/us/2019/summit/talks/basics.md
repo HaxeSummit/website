@@ -1,7 +1,7 @@
 ---
 speakers: ["andy"]
-starts: 2019-05-08 11:30:00
-duration: 120
+starts: 2019-05-10 09:00:00
+duration: 115
 ---
 
 # Introductory Haxe Workshop

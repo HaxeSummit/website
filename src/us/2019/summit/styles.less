@@ -678,11 +678,11 @@ section.schedule {
             width: 33.36%;
           }
 
-          .loop-starts-hour(@counter) when (@counter < 18) {
+          .loop-starts-hour(@counter) when (@counter < 19) {
             .loop-starts-hour(@counter+1);
 
             &[data-starts^="@{counter}"] {
-              top: (@counter - 9) * 60 * @pxpm - 60px;
+              top: (@counter - 8) * 60 * @pxpm;
             }
           }
 

@@ -1,7 +1,7 @@
 ---
 speakers: ["twebb"]
-starts: 2019-05-08 11:30:00
-duration: 60
+starts: 2019-05-09 10:00:00
+duration: 55
 ---
 
 # Audio Development with Haxe

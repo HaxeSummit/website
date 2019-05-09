@@ -1,7 +1,7 @@
 ---
 speakers: ["juraj"]
-starts: 2019-05-08 11:30:00
-duration: 120
+starts: 2019-05-08 13:30:00
+duration: 115
 ---
 
 # Declarative UI programming workshop

@@ -629,32 +629,35 @@ section.schedule ol.days > li .talks > li[data-track="C"] {
   left: 66.66%;
   width: 33.36%;
 }
+section.schedule ol.days > li .talks > li[data-starts^="18"] {
+  top: 1200px;
+}
 section.schedule ol.days > li .talks > li[data-starts^="17"] {
-  top: 900px;
+  top: 1080px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="16"] {
-  top: 780px;
+  top: 960px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="15"] {
-  top: 660px;
+  top: 840px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="14"] {
-  top: 540px;
+  top: 720px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="13"] {
-  top: 420px;
+  top: 600px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="12"] {
-  top: 300px;
+  top: 480px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="11"] {
-  top: 180px;
+  top: 360px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="10"] {
-  top: 60px;
+  top: 240px;
 }
 section.schedule ol.days > li .talks > li[data-starts^="9"] {
-  top: -60px;
+  top: 120px;
 }
 section.schedule ol.days > li .talks > li[data-starts$="0"] {
   margin-top: 0px;

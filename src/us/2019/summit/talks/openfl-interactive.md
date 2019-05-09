@@ -1,7 +1,7 @@
 ---
 speakers: ["joshua"]
-starts: 2019-05-08 11:30:00
-duration: 120
+starts: 2019-05-09 13:30:00
+duration: 115
 ---
 
 # OpenFL Interactive

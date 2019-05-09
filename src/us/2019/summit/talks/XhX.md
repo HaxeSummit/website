@@ -1,7 +1,7 @@
 ---
 speakers: ["hugh"]
-starts: 2019-05-08 11:30:00
-duration: 60
+starts: 2019-05-08 16:00:00
+duration: 55
 ---
 
 # XhX - 10 years of haxe

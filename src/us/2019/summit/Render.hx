@@ -75,6 +75,7 @@ class Render {
       function (a, b) return Reflect.compare(a.starts.getTime(), b.starts.getTime())
     );
 
+
     var interviews =
       read('src/us/2019/summit/interviews', function (v)
       return dissect(v.markdown).map(function (doc):Interview return {
@@ -83,10 +84,10 @@ class Render {
       })
       );
 
-    var names = 'Thursday,Friday,Saturday'.split(',');
+    var names = 'Wednesday,Thursday,Friday'.split(',');
 
     'bin/us/2019/index.html'.saveContent(renderAll({
-      days: [for (day in 3...6) {
+      days: [for (day in 8...11) {
         {
           name: names.shift(),
         talks: [for (t in talks) if (t.starts.getDate() == day) t],

@@ -1,7 +1,7 @@
 ---
 speakers: ["ionosoft"]
-starts: 2019-05-08 11:30:00
-duration: 60
+starts: 2019-05-10 11:30:00
+duration: 55
 ---
 
 # Eating Soup with a Fork: Retooling the Lime Stack to Embed an OpenFL App into a .NET Control

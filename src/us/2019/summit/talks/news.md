@@ -1,7 +1,7 @@
 ---
 speakers: ["alex"]
-starts: 2019-05-08 11:30:00
-duration: 60
+starts: 2019-05-08 09:30:00
+duration: 55
 ---
 
 # Haxe 4: What's new.

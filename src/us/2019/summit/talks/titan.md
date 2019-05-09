@@ -1,7 +1,7 @@
 ---
 speakers: ["justin"]
-starts: 2019-05-08 11:30:00
-duration: 30
+starts: 2019-05-08 10:30:00
+duration: 25
 ---
 
 # Titan : Macro-Powered FFI for Haxe/LuaJit

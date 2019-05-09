@@ -1,7 +1,4 @@
-(: static function renderDay(name, talks:Array
-<Talk>, speakers:Map
-    <String
-            , Speaker>) :)
+(: static function renderDay(name, talks:Array<Talk>, speakers:Map<String, Speaker>) :)
         <h2>(: name :)</h2>
         <ol class="talks">
             (: for t in talks :)
@@ -39,11 +36,13 @@
                         (: for s in t.speakers :)
                         <label for="speaker-(: s :)">
                             (: var s = speakers[s] :)
-                            <div class="image">
-                                <img src="(: s.image :)">
-                            </div>
-                            <h2>(: s.fullName :)</h2>
-                            <h3>(: s.jobTitle :)</h3>
+                            (: if s != null :)
+                                <div class="image">
+                                    <img src="(: s.image :)">
+                                </div>
+                                <h2>(: s.fullName :)</h2>
+                                <h3>(: s.jobTitle :)</h3>
+                            (: end :)
                         </label>
                         (: end :)
                     </ul>
@@ -77,7 +76,7 @@
             (: section('Tickets', tickets) :)
             (:* section('Stream', stream) *:)
             (: section('Location', location) :)
-            (: section('Schedule', pendingSchedule) :)
+            (: section('Schedule', schedule(conf)) :)
             (: footer :)
         </main>
         (: end :)

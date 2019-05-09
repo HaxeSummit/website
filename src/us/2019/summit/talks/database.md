@@ -1,7 +1,7 @@
 ---
 speakers: ["ryan"]
-starts: 2019-05-08 11:30:00
-duration: 60
+starts: 2019-05-09 11:30:00
+duration: 55
 ---
 
 # The Untapped Potential of Haxe: Why I'm Building a Database Engine Using Pure-Haxe
