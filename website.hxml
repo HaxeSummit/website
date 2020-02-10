@@ -1,7 +1,7 @@
 -lib markdown
 -lib lessie
 -lib tink_template
--lib yaml
+-lib hx-yaml
 -lib tink_anon
 -D lessieOutput=./docs/us/2019/assets/styles.css
 -cp src/us/2019

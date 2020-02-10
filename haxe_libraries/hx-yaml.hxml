@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/mikestead/hx-yaml#ee02b55bd5803438b67bf444dec46cae04d947bf" into hx-yaml/0.0.0/github/ee02b55bd5803438b67bf444dec46cae04d947bf
+-cp ${HAXE_LIBCACHE}/hx-yaml/0.0.0/github/ee02b55bd5803438b67bf444dec46cae04d947bf/src
+-D hx-yaml=0.0.0
