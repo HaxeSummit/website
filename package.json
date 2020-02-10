@@ -22,7 +22,7 @@
   "homepage": "https://github.com/HaxeSummit2017/website#readme",
   "dependencies": {
     "http-server": "=0.10.0",
-    "less": "^3.9.0",
+    "less": "3.10.3",
     "lix": "^15.3.5"
   }
 }
